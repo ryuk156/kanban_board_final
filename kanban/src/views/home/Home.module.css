@@ -1,0 +1,49 @@
+.container {
+  composes: container from '../../common/styles/styles.module.css';
+  padding: 15px 0 30px;
+}
+
+.boards {
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.board {
+  display: block;
+  text-decoration: none;
+  align-self: center;
+  text-align: center;
+  padding: 45px 0;
+  box-shadow: 3px 3px 3px 2px #ccc;
+  background-color:white;
+  color: #333;
+  border-radius: 4px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-transform: capitalize;
+}
+
+
+
+.boardName {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 15px 15px 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .boards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .boards {
+    grid-template-columns: 1fr;
+  }
+}
