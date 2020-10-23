@@ -31,11 +31,7 @@ export const Header = () => {
                   Home
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/createboard" activeClassName={styles.activeLink}>
-                  Create a board
-                </NavLink>
-              </li>
+              
               <li className={styles.dropdown} onClick={toggleDropdown}>
                 {currentUser.email}
               </li>
