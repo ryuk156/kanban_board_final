@@ -77,7 +77,7 @@ const Login = ({ history }) => {
       </div>
       <div className={styles.formGroup}>
         <button
-          className={commonStyle.info}
+          className={commonStyle.danger}
           disabled={isLogging}
           onClick={handleLogin}
           style={{

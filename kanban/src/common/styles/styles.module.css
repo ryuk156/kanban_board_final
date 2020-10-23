@@ -60,6 +60,8 @@
   color: #fff;
 }
 
+
+
 @media screen and (max-width: 900px) {
   .container {
     padding: 0 15px;

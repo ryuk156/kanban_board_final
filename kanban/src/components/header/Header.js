@@ -27,25 +27,39 @@ export const Header = () => {
           {currentUser ? (
             <>
               <li>
-                <NavLink exact activeClassName={styles.activeLink} to="/">
+                <NavLink exact  activeClassName={styles.activeLink} to="/">
                   Home
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/createboard" activeClassName={styles.activeLink}>
-                  Create a board
-                </NavLink>
-              </li>
-              <li className={styles.dropdown} onClick={toggleDropdown}>
-                {currentUser.email}
+              
+              
+              <li className={styles.initial}>
+                <div style={{height:"80px",marginTop:"10px"}}>
+                {currentUser.email.charAt(0)}
+                </div>
+               
+                
+                
+                </li>
+               
+                
+              
+              
+              <li  className={styles.signOut} >
+                <div to="/"  onClick={handleLogout}>
+               Sign out 
+              </div>
               </li>
             </>
           ) : (
             <>
               <li>
-                <NavLink activeClassName={styles.activeLink} to="/login">
-                  Login
+              
+              <NavLink activeClassName={styles.activeLink}  to="/login">
+              Login  
                 </NavLink>
+            
+               
               </li>
               <li>
                 <NavLink activeClassName={styles.activeLink} to="/signup">
@@ -55,13 +69,9 @@ export const Header = () => {
             </>
           )}
         </ul>
-        {isDropdown && (
-          <div className={styles.dropdownMenu}>
-            <div className={styles.dropdownItem} onClick={handleLogout}>
-              Logout
-            </div>
-          </div>
-        )}
+        
+        
+        
       </nav>
     </header>
   );

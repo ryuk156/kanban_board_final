@@ -49,11 +49,13 @@ const SignUp = ({ history }) => {
   return (
     <div className={styles.formContainer}>
       <div className={styles.formHeader}>Getting started</div>
+     
       {error && (
         <Alert type="error" canClose={handleAlertClose}>
           {error}
         </Alert>
       )}
+      
       <div className={styles.formGroup}>
         <label htmlFor="name">Name</label>
         <input
@@ -88,7 +90,7 @@ const SignUp = ({ history }) => {
         />
       </div>
       <div className={styles.formGroup}>
-        <button className={commonStyle.info} onClick={handleSignUp}  style={{
+        <button className={commonStyle.danger} onClick={handleSignUp}  style={{
             fontFamily:"Pacifico"
           }}>
           Sign Up

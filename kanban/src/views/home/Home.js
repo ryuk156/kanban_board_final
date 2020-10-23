@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import styles from './Home.module.css';
 import commonStyles from './../../common/styles/styles.module.css';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { getBoards } from '../../utils/data';
 import { Alert } from '../../common/alert/Alert';
 import { Loader } from '../../common/loader/Loader';
@@ -28,30 +28,44 @@ export const Home = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className={styles.container}>
-          <h2 className={commonStyles.title}>Boards</h2>
-          {console.log(boards)}
-          {boards.length === 0 && (
-            <Alert type="danger" isClosable={false}>
-              You haven't created any boards. Kindly click on the 'Create a
-              Board' button in the navigation bar to create a board.
-            </Alert>
-          )}
-          <div className={styles.boards}>
-            {boards.map((board) => {
-              return (
-                <Link
-                  to={'/board/' + board.id}
-                  className={styles.board}
-                  key={board.id}
-                >
-                  <div className={styles.boardName}>{board.name}</div>
-                </Link>
-              );
-            })}
+          <div className={styles.container}>
+            <h2 className={commonStyles.title}>Boards</h2>
+            {console.log(boards)}
+            {boards.length === 0 && (
+              <div className={styles.boards}>
+                <div className={styles.board} style={{ fontFamily: "Nunito", color: "grey" }} > <NavLink to="/createboard" style={{ textDecoration: "none", color: "grey" }}  >
+                  +  Create  board
+            </NavLink></div>
+              </div>
+            )}
+            <div className={styles.boards}>
+              {boards.map((board) => {
+                return (
+                  
+                    <Link
+                      to={'/board/' + board.id}
+                      className={styles.board}
+                      key={board.id}
+                    >
+                      <div className={styles.boardName}>{board.name}</div>
+
+
+                    </Link>
+
+
+                    
+                  
+                );
+              })}
+              <div className={styles.boards}>
+                      <div className={styles.board} style={{ fontFamily: "Nunito", color: "grey" }} > <NavLink to="/createboard" style={{ textDecoration: "none", color: "grey" }}  >
+                        +  Create  board
+            </NavLink></div>
+                    </div>
+            </div>
           </div>
-        </div>
-      )}
+
+        )}
     </>
   );
 };

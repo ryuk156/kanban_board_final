@@ -17,16 +17,17 @@ export const AddColumn = ({ handleAdd, handleClose }) => {
   return (
     <Modal>
       <div className={styles.modalHead}>
-        <div>Add Column</div>
+       <center> <div style={{display:"flex",fontFamily:"Pacifico",color:"#ef5350"}}>Add List</div> </center>
         <div className={styles.close} onClick={handleClose}>
           &times;
         </div>
       </div>
       <div className={styles.modalBody}>
         <div className={styles.field}>
-          <label htmlFor="column_name">Enter a Column Name:</label>
+          
           <input
             type="text"
+            placeholder="eg. Cricket"
             value={columnName}
             name="column_name"
             id="column_name"
@@ -37,9 +38,9 @@ export const AddColumn = ({ handleAdd, handleClose }) => {
           <button
             id="CreateColumn"
             onClick={handleAddCloumn}
-            className={commonStyles.info}
+            className={commonStyles.danger}
           >
-            Add Column
+           + Add List
           </button>
         </div>
       </div>

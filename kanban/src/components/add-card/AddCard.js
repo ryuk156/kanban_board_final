@@ -70,7 +70,7 @@ export const AddCard = ({
   return (
     <Modal>
       <div className={styles.modalHead}>
-        <div>{isAdd ? 'Add Card' : 'Edit Card'}</div>
+        <div style={{fontFamily:"Pacifico",color:"#ef5350"}}>{isAdd ? 'Add Card' : 'Edit Card'}</div>
         <div className={styles.close} onClick={handleClose}>
           &times;
         </div>
@@ -84,19 +84,19 @@ export const AddCard = ({
       )}
       <div className={styles.modalBody}>
         <div className={styles.formField}>
-          <label htmlFor="title">Enter the title for your task</label>
+          <label htmlFor="title">Title</label>
           <input
             type="text"
             name="title"
             id="title"
-            placeholder="eg. Add a new Icon"
+            placeholder="eg. playing cricket"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
         <div className={styles.formRow}>
           <div className={styles.formField}>
-            <label htmlFor="title">Choose members for this task</label>
+            <label htmlFor="title">Choose members</label>
             <Select
               options={teamMembers}
               isMulti
@@ -118,13 +118,14 @@ export const AddCard = ({
         </div>
 
         <div className={styles.formField}>
-          <label htmlFor="title">Add the descriptions for your task</label>
+          <label htmlFor="title">Descriptions</label>
           <textarea
             name="description"
             id="description"
             placeholder="Add your description here"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            
           ></textarea>
 
           <small className={styles.formInfo}>
@@ -147,11 +148,11 @@ export const AddCard = ({
 
         <div className={styles.formField}>
           <button
-            className={commonStyles.info}
+            className={commonStyles.danger}
             id="CreateCard"
             onClick={onSave}
           >
-            {isAdd ? 'Add Card' : 'Edit Card'}
+            {isAdd ? '+ Add Card' : 'Edit Card'}
           </button>
         </div>
       </div>

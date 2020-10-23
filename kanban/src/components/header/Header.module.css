@@ -41,7 +41,7 @@
 }
 
 .menu li {
-  text-transform: uppercase;
+  
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -62,9 +62,31 @@
   background-color: rgba(255, 255, 255, 0.253);
 }
 
-.dropdown {
+.initial {
   cursor: pointer;
-  text-transform: lowercase !important;
+  display: inline-block;
+  font-size: 16px !important;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: -2.5em;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.253);
+  vertical-align: middle;
+  box-shadow: 2px 3px 6px  #ef5350;
+  margin-top: 10px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.signOut{
+  display: inline-block;
+  padding: 20px 5px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.2s;
+  outline: none;
+  cursor: pointer;
 }
 
 .dropdownMenu {

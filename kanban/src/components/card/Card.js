@@ -27,14 +27,15 @@ export const Card = ({ card, board, hanldeEdit, hanldeArchive, column }) => {
   const detailsModal = (
     <Modal>
       <div className={styles.modalHeader}>
-        <div className={styles.title}>
+ 
+        <div className={styles.title} style={{fontFamily:"Nunito",color:"#FD9E90"}}>
           {card.title}
           <div className={styles.meta}>
-            in <span>{board.name}</span>
+            in <span >{board.name}</span>
           </div>
         </div>
         <div className={styles.btnGroup}>
-          <button className={commonStyles.info} onClick={doEdit}>
+          <button className={commonStyles.danger} onClick={doEdit}>
             Edit
           </button>
           <button className={commonStyles.danger} onClick={doArchive}>

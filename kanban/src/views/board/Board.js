@@ -188,8 +188,8 @@ export const Board = ({ match, history }) => {
         <div className={styles.container}>
           <div className={styles.containerHeader}>
             <h2 className={commonStyles.title}>{board.name}</h2>
-            <button className={commonStyles.danger} onClick={handleBoardDelete}>
-              Delete Board
+            <button className={commonStyles.danger} style={{backgroundColor:"#ef5350",borderRadius:"50px",boxShadow: "2px 3px 6px grey "}} onClick={handleBoardDelete}>
+           Delete Board 
             </button>
           </div>
           {error && (
@@ -245,18 +245,18 @@ export const Board = ({ match, history }) => {
                         className={styles.add}
                         onClick={() => openAddCard(column)}
                       >
-                        Add a card
+                       + Add Card
                       </div>
                     </footer>
                   </div>
                 );
               })}
-              <button
+              <div
                 className={styles.addButton}
                 onClick={() => setIsColumnAdd(true)}
               >
-                Add a column
-              </button>
+                + Add List
+              </div>
             </div>
           </div>
         </div>
