@@ -4,6 +4,9 @@ import commonStyle from '../../common/styles/styles.module.css';
 import { withRouter, Link, Redirect } from 'react-router-dom';
 import { firebaseApp } from '../../firebase/init';
 import { Alert } from '../../common/alert/Alert';
+import  growth from '../../images/growth-2.png';
+import  Plan from '../../images/plan.png';
+import  login from '../../images/login.png';
 import { AuthContext } from '../../context/Auth';
 
 const SignUp = ({ history }) => {
@@ -47,7 +50,14 @@ const SignUp = ({ history }) => {
   }
 
   return (
-    <div className={styles.formContainer}>
+    <div style={{display:"flex" }}>
+
+
+    <div style={{margin:"100px"}}>
+     <img src={Plan} alt="back"  style={{width:"650px"}} />
+     </div>
+       
+    <div className={styles.formContainers}>
       <div className={styles.formHeader}>Getting started</div>
      
       {error && (
@@ -106,6 +116,7 @@ const SignUp = ({ history }) => {
             fontFamily:"Pacifico",color:"black"
           }} >login in</Link></b>
       </div>
+    </div>
     </div>
   );
 };

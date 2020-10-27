@@ -4,6 +4,9 @@ import commonStyle from './../../common/styles/styles.module.css';
 import { firebaseApp } from '../../firebase/init';
 import { withRouter, Redirect, Link } from 'react-router-dom';
 import { AuthContext } from '../../context/Auth';
+import  growth from '../../images/growth-2.png';
+import  Plan from '../../images/plan.png';
+import  login from '../../images/login.png';
 import { Alert } from '../../common/alert/Alert';
 
 const Login = ({ history }) => {
@@ -42,9 +45,12 @@ const Login = ({ history }) => {
   }
 
   return (
-   <div  className={styles.home_image}   >
+   <div style={{display:"flex" }}>
 
 
+<div style={{margin:"100px"}}>
+ <img src={login} alt="back"  style={{width:"650px"}} />
+ </div>
    
     <div className={styles.formContainer}>
       <div className={styles.formHeader}>KanBan Board</div>
