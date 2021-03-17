@@ -15,4 +15,4 @@ Start the application using:
 
 ```cd kanban```
 
-```npm start```
+```yarn start```
