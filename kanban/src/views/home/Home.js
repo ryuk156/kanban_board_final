@@ -31,13 +31,7 @@ export const Home = () => {
           <div className={styles.container}>
             <h2 className={commonStyles.title}>Boards</h2>
             {console.log(boards)}
-            {boards.length === 0 && (
-              <div className={styles.boards}>
-                <div className={styles.board} style={{ fontFamily: "Nunito", color: "grey" }} > <NavLink to="/createboard" style={{ textDecoration: "none", color: "grey" }}  >
-                  +  Create  board
-            </NavLink></div>
-              </div>
-            )}
+          
             <div className={styles.boards}>
               {boards.map((board) => {
                 return (

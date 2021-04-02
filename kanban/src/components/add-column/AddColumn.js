@@ -8,7 +8,7 @@ export const AddColumn = ({ handleAdd, handleClose }) => {
 
   function handleAddCloumn() {
     if (!columnName) {
-      return alert('Enter a column name');
+      return alert('Enter a Group name');
     }
 
     handleAdd(columnName);
@@ -17,7 +17,7 @@ export const AddColumn = ({ handleAdd, handleClose }) => {
   return (
     <Modal>
       <div className={styles.modalHead}>
-       <center> <div style={{display:"flex",fontFamily:"Pacifico",color:"#ef5350"}}>Add List</div> </center>
+       <center> <div style={{display:"flex",fontFamily:"Pacifico",color:"#ef5350"}}>Add Group</div> </center>
         <div className={styles.close} onClick={handleClose}>
           &times;
         </div>
@@ -27,7 +27,7 @@ export const AddColumn = ({ handleAdd, handleClose }) => {
           
           <input
             type="text"
-            placeholder="eg. Cricket"
+            placeholder="eg. Group 1"
             value={columnName}
             name="column_name"
             id="column_name"
@@ -40,7 +40,7 @@ export const AddColumn = ({ handleAdd, handleClose }) => {
             onClick={handleAddCloumn}
             className={commonStyles.danger}
           >
-           + Add List
+           + Add Group
           </button>
         </div>
       </div>

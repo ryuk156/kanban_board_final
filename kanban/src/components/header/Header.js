@@ -21,7 +21,7 @@ export const Header = () => {
       <nav className={styles.nav}>
         <div className={styles.brand}>
           <NavLink to="/">
-            Kanban Board</NavLink>
+            EMS </NavLink>
         </div>
         <ul className={styles.menu}>
           {currentUser ? (

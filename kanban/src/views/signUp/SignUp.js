@@ -58,7 +58,7 @@ const SignUp = ({ history }) => {
      </div>
        
     <div className={styles.formContainers}>
-      <div className={styles.formHeader}>Getting started</div>
+      <div className={styles.formHeader}>Getting started with EMS</div>
      
       {error && (
         <Alert type="error" canClose={handleAlertClose}>

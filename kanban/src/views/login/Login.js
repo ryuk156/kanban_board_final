@@ -53,7 +53,7 @@ const Login = ({ history }) => {
  </div>
    
     <div className={styles.formContainer}>
-      <div className={styles.formHeader}>KanBan Board</div>
+      <div className={styles.formHeader}>EMS</div>
       {error && (
         <Alert type="error" canClose={handleAlertClose}>
           {error}

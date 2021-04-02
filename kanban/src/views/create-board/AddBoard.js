@@ -52,7 +52,7 @@ export const AddBoard = ({ history }) => {
           {error}
         </Alert>
       )}
-      <h2 className={commonStyles.title}>Create a board</h2>
+      <h2 className={commonStyles.title}>Create Employe Board</h2>
       <div className={styles.field}>
         <label htmlFor="name">Enter a name for your board</label>
         <input

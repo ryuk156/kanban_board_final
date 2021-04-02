@@ -152,7 +152,7 @@ export const AddCard = ({
             id="CreateCard"
             onClick={onSave}
           >
-            {isAdd ? '+ Add Card' : 'Edit Card'}
+            {isAdd ? '+ Add Employe' : 'Edit Employe'}
           </button>
         </div>
       </div>
