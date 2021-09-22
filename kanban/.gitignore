@@ -45,12 +45,12 @@ bower_components
 .build/Release
 
 # Dependency directories
-.node_modules/
+.node_modules
 
 # Optional npm cache directory
 .npm
 
-# Optional eslint cache
+# Optional eslinnode_modules/t cache
 .eslintcache
 
 # Optional REPL history
